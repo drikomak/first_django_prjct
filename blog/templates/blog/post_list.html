@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <title>Football Fest</title>
     </head>
     <body>
         <header>
             <h1><a href="/">Welcome to <strong>football fest</strong></a></h1>
         </header>
-
+        <br>
+        <br>
+        <br>
         {% for post in posts %}
     <article>
-        <time>published: {{ post.published_date }}</time>
         <h2><a href="">{{ post.title }}</a></h2>
         <p>{{ post.text|linebreaksbr }}</p>
+        <br>
+        <time>published: {{ post.published_date }}</time>
+        <br>
+        <br>
     </article>
         {% endfor %}
     </body>
