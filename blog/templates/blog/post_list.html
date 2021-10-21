@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Football Fest is comming soon</title>
+        <title>Football Fest</title>
     </head>
     <body>
         <header>
-        <h1><a href="/">Welcome to <em>football fest</em></a> </h1>
+            <h1><a href="/">Welcome to <strong>football fest</strong></a></h1>
         </header>
 
-        <article>
-            <time>published 20.10.2021, 1:29</time>
-            <h2><a href="">The official first version of the backend of the app</a></h2>
-            <p>I will be updated the app everyday untill is launch, i think this is one of the best idea i had for the last 20 years of my life,
-                it's gonna be long but trust me, it is gonna be massive!
-            </p>
-        </article>
-
-        <article>
-        <h4>Functionnality available soon :</h4>
-        <ul>
-            <li>Real time chat between fans from differents squads</li>
-            <li>Blog with all football news and transfer</li>
-            <li>Profile, twitter like with options like favourites players, favourtie team, etc...</li>
-        </ul>
-        </article>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h3>Coded with python using Django by Idriss <strong>Makroum</strong></h3>
-        <time>First version published: 20.10.2021, 1:38</time>
+        {% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+        {% endfor %}
     </body>
 </html>
-
 
