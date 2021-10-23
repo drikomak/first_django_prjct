@@ -11,9 +11,11 @@
         <body>
             <header class="page-header">
               <div class="container">
-                  <a href="{% url 'post_new' %}" class="top-menu">
-                    {% include './icons/file-earmark-plus.svg' %}
+                  {% if user.is_authentificated %}
+                    <a href="{% url 'post_new' %}" class="top-menu">
+                        {% include './icons/file-earmark-plus.svg' %}
                   </a>
+                  {% endif %}
                   <h1><a href="/">Football Fest</a></h1>
               </div>
             </header>
